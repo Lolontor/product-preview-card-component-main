@@ -33,13 +33,13 @@ body{
     border-radius: .5rem;
     background-color: var(--White);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
     margin-top: .5em;
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 .product-img-desktop{
@@ -127,12 +127,12 @@ img{
 
 @media (width > 27rem) {
     .item-card{
-        flex-direction: row;
-        max-width: 30rem;
+        grid-template-columns: 1fr 1fr;
+        max-width: 40rem;
     }
 
-    .img-div, .text-div{
-        flex: 1;
+    .text-div{
+        justify-content: space-around;
     }
 
     .product-img-mobile{
